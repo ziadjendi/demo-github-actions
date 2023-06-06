@@ -34,7 +34,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ASIA2JCQNLPOO4USW24R
-          aws-secret-access-key: pKyiu/dSQoZ0wMNY+W3SKWZTs8qoBVk/17dfkAOm
+          aws-secret-access-key: "pKyiu/dSQoZ0wMNY+W3SKWZTs8qoBVk/17dfkAOm"
           aws-region: ap-southeast-1
           # role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           # role-external-id: ${{ secrets.AWS_ROLE_EXTERNAL_ID }}
