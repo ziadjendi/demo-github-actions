@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - prod
-      - dev
-      - staging
 
 env:
   REACT_APP_FIREBASE_API_KEY: ${{ secrets.PROD_FIREBASE_API_KEY }}
@@ -21,18 +19,13 @@ jobs:
           - branch: prod
             environment: prod
 
-          - branch: dev
-            environment: dev
-
-          - branch: staging
-            environment: staging
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
       - name: Install dependencies
         run: npm install
       - name: Build React app
