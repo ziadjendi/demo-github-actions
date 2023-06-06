@@ -34,7 +34,8 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ASIA2JCQNLPOO4USW24R
-          aws-secret-access-key: "pKyiu/dSQoZ0wMNY+W3SKWZTs8qoBVk/17dfkAOm"
+          aws-secret-access-key: pKyiu/dSQoZ0wMNY+W3SKWZTs8qoBVk/17dfkAOm
+          aws-session-token: IQoJb3JpZ2luX2VjEPr//////////wEaDGV1LWNlbnRyYWwtMSJHMEUCIDmOgUD4r7bcfoRYs3tjvdP0eqGJ+wkJwl9U5v5xgyTPAiEAyLBNrRO/3Bad3m1qghf57y4HWQudbcNInxM4GNPLr+QqlgMIQxAAGgw3MDY2OTA3Njc4MzYiDDNEah4TkQYYclPnFirzAmNVdgIoCQ4uomQxFOtZjVKox2lA/23NGrwR517scQKoBjd9LjkQ6QKmaHWvQwwbv3bp9Ju/GCUxOJa+n/ZQmgKDW2Q5CCq0s8DbidR0x51HBznze7k8KsOPtjB9crOOswxbQp0/Og063OBYC1xS84xlXpI4qKzFSKFl3vB7kTluLbG/3T/KmG5frG3fsxVNX+ejbLDkl3q8qKQmLRfznGDny16RJ8xdicWcfBMonW1Us7IJoNk7I7vegpOs9UFQ9QHGavJLH7xqTo5iEa3Q2uEpC1TtvJ/p4foAMxNZ9m8GWBm5sgonemCGhy0OOla1l8s6TwcA9XT6dPsWgpSC642kA3DJP/I8Up+sU8HDkn6/DoNfGHQ+xFG+RuH/Rkcr+2oG51FXlUu4/8ZtGzNrdcA/qXuruDQmcqB2KbLod2Ap6Uji17NbJnstTT6EfsTr8hZB3TVg58kefhXxF18eiNGknxh5vKoQvT6warrx4FSooj6tMMGK/KMGOqYBeMlgWxgKeIqd+SiD3dCKDuXKhwB5oEw/BfILhLeL8G8pS6C8aEEHHdsTgUdQ+dYCXuPLbBZgnEv2g6FLs5YviLSj1/+ghXN3ZebkuJmXst/c9sQxev0dFJuqyu6D0mSm1IaU6XpvKRThgUuR9OnInKb4D/PpcZJDrliZK+OX7FIbgfBm98iuECWwsYqA3HqiYlecO+rawhp2PkAJeMSavcXMIiyc3A==
           aws-region: ap-southeast-1
           # role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           # role-external-id: ${{ secrets.AWS_ROLE_EXTERNAL_ID }}
