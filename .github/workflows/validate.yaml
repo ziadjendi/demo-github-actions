@@ -1,0 +1,39 @@
+name: Validate Codebase Changes
+
+on:
+  pull_request:
+    branches:
+      - prod
+      - dev
+      - staging
+env:
+  common:
+    REACT_APP_FIREBASE_API_KEY: ${{ secrets.PROD_FIREBASE_API_KEY }}
+    REACT_APP_FIREBASE_AUTH_DOMAIN: ${{ secrets.PROD_FIREBASE_AUTH_DOMAIN }}
+    REACT_APP_FIREBASE_PROJECT_ID: ${{ secrets.PROD_FIREBASE_PROJECT_ID }}
+  prod:
+    ENVIRONMENT: prod
+  dev:
+    ENVIRONMENT: dev
+  staging:
+    ENVIRONMENT: staging
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    env: ${{ matrix.env }}
+    strategy:
+      matrix:
+        env:
+          - common
+          - ${{ github.ref_slug }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Install dependencies
+        run: npm install
+      - name: Build React app
+        run: npm run build
